@@ -27,27 +27,13 @@ app.on('window-all-closed', function () {
 })
 
 // vars
-const img_files = []
-
-// funcs
-function isImage(filename) {
-  const ext = filename.substring(filename.lastIndexOf('.') + 1);
-    if (['png', 'jpeg', 'jpg'].includes(ext)) {
-    return true
-  } else {
-    return false
-  }
-}
+let app_data = {}
 
 // API routing
-ipcMain.on('img_files', (event, data) => {
-  for (const elem of data) {
-    if (isImage(elem)) {
-      img_files.push(elem);
-    }
-  }
+ipcMain.on('app_data', (event, data) => {
+  app_data = data;
 })
 
-ipcMain.handle('img_files', (event) => {
-  return(img_files)
+ipcMain.handle('app_data', (event) => {
+  return(app_data)
 })

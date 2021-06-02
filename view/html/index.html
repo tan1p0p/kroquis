@@ -8,24 +8,48 @@
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <title>kroquis</title>
   </head>
+
   <body>
     <form>
       <div class="mb-3">
         <label for="formFileMultiple" class="form-label">Choose photo dir</label>
-        <input id="fileInput" class="form-control" type="file" webkitdirectory directory multiple required/>
+        <input id="file_input" class="form-control" type="file" webkitdirectory directory multiple required/>
+      </div>
+
+      <div class="mb-3 form-check form-check-inline">
+        <label class="form-check-label" name="interval">1 sec</label>
+        <input class="form-check-input" name="interval" type="radio" value=1>
       </div>
       <div class="mb-3 form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-        <label class="form-check-label" for="inlineRadio1">30 sec</label>
+        <label class="form-check-label" name="interval">30 sec</label>
+        <input class="form-check-input" name="interval" type="radio" value=30>
       </div>
       <div class="mb-3 form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-        <label class="form-check-label" for="inlineRadio2">60 sec</label>
+        <label class="form-check-label" name="interval">60 sec</label>
+        <input class="form-check-input" name="interval" type="radio" value=60>
       </div>
       <div class="mb-3 form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-        <label class="form-check-label" for="inlineRadio3">90 sec</label>
+        <label class="form-check-label" name="interval">90 sec</label>
+        <input class="form-check-input" name="interval" type="radio" value=90>
       </div>
+      <div class="mb-3 form-check form-check-inline">
+        <label class="form-check-label" name="interval">2 min</label>
+        <input class="form-check-input" name="interval" type="radio" value=120>
+      </div>
+      <div class="mb-3 form-check form-check-inline">
+        <label class="form-check-label" name="interval">5 min</label>
+        <input class="form-check-input" name="interval" type="radio" value=300>
+      </div>
+      <div class="mb-3 form-check form-check-inline">
+        <label class="form-check-label" name="interval">10 min</label>
+        <input class="form-check-input" name="interval" type="radio" value=600>
+      </div>
+
+      <div class="input-group mb-3">
+        <input type="number" class="form-control" id="image_num">
+        <span class="input-group-text">images</span>
+      </div>
+
       <div class="mb-3 form-check form-switch">
         <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
         <label class="form-check-label" for="flexSwitchCheckDefault">flip vertically</label>
@@ -42,13 +66,14 @@
         <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
         <label class="form-check-label" for="inlineCheckbox3">randomize</label>
       </div>
+
       <div>
-        <a id='startButton' href="./viewer.html">
-            <button type="button" class="btn btn-primary">Start!</button>
+        <a id='start_button' href="./viewer.html">
+          <button type="button" class="btn btn-primary">Start!</button>
         </a>
       </div>
     </form>
 
-    <script src="../js/index.js"></script>
   </body>
+  <script src="../js/index.js"></script>
 </html>
