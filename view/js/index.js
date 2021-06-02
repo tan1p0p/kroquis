@@ -32,8 +32,15 @@ function getInterval() {
 }
 
 function getImageNum() {
-  image_num = document.getElementById('image_num')
-  return image_num.value
+  return document.getElementById('image_num').value
+}
+
+function getFlip(axis) {
+  return document.getElementById(`flip_${axis}`).checked
+}
+
+function getFlipRandomize(axis) {
+  return document.getElementById(`flip_${axis}_rand`).checked
 }
 
 // start_button func
@@ -44,5 +51,9 @@ start_button.addEventListener('click', () => {
     'img_files': img_files,
     'image_num': getImageNum(),
     'interval': getInterval(),
+    'flip_h': getFlip('h'),
+    'flip_h_rand': getFlipRandomize('h'),
+    'flip_v': getFlip('v'),
+    'flip_v_rand': getFlipRandomize('v'),
   })
 });
