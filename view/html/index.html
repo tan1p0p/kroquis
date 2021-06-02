@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    <!-- <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.rtl.min.css">
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <title>kroquis</title>
+  </head>
+  <body>
+    <form>
+      <div class="mb-3">
+        <label for="formFileMultiple" class="form-label">Choose photo dir</label>
+        <input id="fileInput" class="form-control" type="file" webkitdirectory directory multiple required/>
+      </div>
+      <div class="mb-3 form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+        <label class="form-check-label" for="inlineRadio1">30 sec</label>
+      </div>
+      <div class="mb-3 form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        <label class="form-check-label" for="inlineRadio2">60 sec</label>
+      </div>
+      <div class="mb-3 form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+        <label class="form-check-label" for="inlineRadio3">90 sec</label>
+      </div>
+      <div class="mb-3 form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+        <label class="form-check-label" for="flexSwitchCheckDefault">flip vertically</label>
+      </div>
+      <div class="mb-3 form-check form-check">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+        <label class="form-check-label" for="inlineCheckbox3">randomize</label>
+      </div>
+      <div class="mb-3 form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+        <label class="form-check-label" for="flexSwitchCheckDefault">flip horizontally</label>
+      </div>
+      <div class="mb-3 form-check form-check">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+        <label class="form-check-label" for="inlineCheckbox3">randomize</label>
+      </div>
+      <div>
+        <a id='startButton' href="./viewer.html">
+            <button type="button" class="btn btn-primary">Start!</button>
+        </a>
+      </div>
+    </form>
+
+    <script src="../js/index.js"></script>
+  </body>
+</html>
